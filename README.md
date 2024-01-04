@@ -21,5 +21,5 @@ This is a React Fitness Exercise App with the functionality to choose exercise c
 ## Deployment
 
 This site is deployed here :
-[Fitness App](https://netlify.com/)
+[Fitness App](https://react-fitness-app-matt.netlify.app/)
 
