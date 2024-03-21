@@ -20,7 +20,7 @@ const HeroBanner = () => {
         Check out the most effective excercises
       </Typography>
       <Button variant="contained" color="error" href="#exercises" sx={{backgroundColor: "#2cb8d1", padding: "10px"}}>Explore Excercises</Button>
-      <Typography fontWeight="600" color="#2cb8d1" sx={{opacity: 0.3, display: {lg: 'block', xs: 'none'}}} fontSize="200px">Exercise</Typography>
+      <Typography fontWeight="600" color="#2cb8d1" sx={{opacity: 0.3, display: {lg: 'block', xs: 'none'}}} fontSize="160px">Exercise</Typography>
       <img src={HeroBannerImage} alt="banner" className="hero-banner-img"/>
     </Box>
   );
