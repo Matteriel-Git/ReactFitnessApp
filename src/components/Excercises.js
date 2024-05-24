@@ -4,7 +4,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import { exerciseOptions, fetchData } from "../utils/fetchData";
 import ExerciseCard from "./ExerciseCard";
 
-const Excercises = ({ setExercises, exercises, bodyPart }) => {
+const Excercises = ({ setExercises, exercises = [], bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const exercisesPerPage = 9;
   const indexOfLastExercise = currentPage * exercisesPerPage;
@@ -21,22 +21,37 @@ const Excercises = ({ setExercises, exercises, bodyPart }) => {
 
   useEffect(() => {
     const fetchExercisesData = async () => {
+      try {
       let exercisesData = [];
+      
       if (bodyPart === "all") {
-        exercisesData = await fetchData(
+        const response = await fetchData(
           "https://exercisedb.p.rapidapi.com/exercises",
           exerciseOptions
         );
+        console.log("Response for 'all':", response);
+          exercisesData = response;
       } else {
-        exercisesData = await fetchData(
+        const response = await fetchData(
           `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`,
           exerciseOptions
         );
+        console.log(`Response for bodyPart ${bodyPart}:`, response);
+          exercisesData = response;
+      }
+      if(!Array.isArray(exercisesData)) {
+        throw new Error('Fetched data is not an array');
       }
       setExercises(exercisesData);
-    };
+    } catch (error) {
+      console.error("Failed to fetch exercises data:", error);
+    }
+  };
     fetchExercisesData();
-  }, [bodyPart]);
+  }, [bodyPart, setExercises]);
+
+
+
 
   return (
     <Box id="exercises" sx={{ mt: { lg: "110px" } }} mt="50px" p="20px">
@@ -69,5 +84,7 @@ const Excercises = ({ setExercises, exercises, bodyPart }) => {
     </Box>
   );
 };
+
+
 
 export default Excercises;
