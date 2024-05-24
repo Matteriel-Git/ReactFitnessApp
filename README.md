@@ -7,8 +7,8 @@ This is a React Fitness App with the functionality to choose exercise categories
 - Fully responsive for all screen sizes.
 - Search Exercise, Muscle Group or equipment.
 - Youtube video suggesions for the detailed overview of exercises.
-- Recommending exercises based on simmilar muscle group.
-- Recommending exercises done on simmilar equipment.
+- Recommending exercises based on similar muscle group.
+- Recommending exercises done on similar equipment.
 
 
 ## Tech Stack
