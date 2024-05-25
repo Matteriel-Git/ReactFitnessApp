@@ -70,7 +70,7 @@ const SearchExcercises = ({setExercises, bodyPart, setBodyPart}) => {
             color: "#fff",
             textTransform: "none",
             width: { lg: "173px", xs: "80px" },
-            height: "60px",
+            height: "57px",
             position: "absolute",
             right: "0px",
             fontSize: { lg: "20px", xs: "14px" },
