@@ -25,7 +25,7 @@ const SearchExcercises = ({setExercises, bodyPart, setBodyPart}) => {
         "https://exercisedb.p.rapidapi.com/exercises",
         exerciseOptions
       );
-
+      
       const searchedExcercises = excrecisesData.filter(
         (exercise) =>
           exercise.name.toLowerCase().includes(search) ||

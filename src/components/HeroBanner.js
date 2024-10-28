@@ -16,14 +16,13 @@ const HeroBanner = () => {
       <Typography fontWeight="700" sx={{fontSize: {lg: "44", xs: "40px"}}} mb="23px" mt="30px">
         Sweat, Smile <br /> and Repeat
       </Typography>
-      <Stack>
       <Typography fontSize="22px" lineHeight="35px" mb={4}>
         Check out the most effective excercises
       </Typography>
-      </Stack>
       <Button variant="contained" color="error" href="#exercises" sx={{backgroundColor: "#2cb8d1", padding: "10px"}}>Explore Excercises</Button>
       <Typography fontWeight="600" color="#2cb8d1" sx={{opacity: 0.3, display: {lg: 'block', xs: 'none'}}} fontSize="160px">Exercise</Typography>
-      <img src={HeroBannerImage} alt="banner" className="hero-banner-img"/>
+      <Stack><img src={HeroBannerImage} alt="banner" className="hero-banner-img"/>
+      </Stack>
     </Box>
   );
 };
