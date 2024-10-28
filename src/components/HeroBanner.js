@@ -2,6 +2,8 @@ import React from "react";
 import { Box, Stack, Typography, Button } from "@mui/material";
 import HeroBannerImage from '../assets/images/banner.png';
 
+/* eslint-disable no-unused-vars */
+
 
 const HeroBanner = () => {
   return (
